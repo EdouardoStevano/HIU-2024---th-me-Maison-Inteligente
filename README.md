@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Hackathon Inter-Universitaire (HIU) - "Hacker votre maison - Maison intelligente"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+Bienvenue dans notre projet de hackathon HIU. Le thème de ce hackathon est "Hacker votre maison - Maison intelligente". Nous avons travaillé dur pour développer une solution innovante qui rendra votre maison plus intelligente et plus efficace.
 
-In the project directory, you can run:
+## Projet : Name APP
+Notre projet vise à utiliser les technologies modernes pour améliorer l'efficacité énergétique, la sécurité et le confort de votre maison. Nous avons développé une série de dispositifs et d'applications qui peuvent être contrôlés à distance, apprendre de vos habitudes et s'adapter à vos besoins.
 
-### `npm start`
+## Fonctionnalités
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Contrôle à distance des appareils électroménagers
+- Système de sécurité intelligent
+- Gestion de l'énergie efficace
+- Automatisation des tâches ménagères
+- Système d'éclairage intelligent
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+Pour installer notre système, suivez les instructions :
+## Configuration du projet
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Assurez-vous d'avoir Node.js et Yarn installés sur votre machine. Si ce n'est pas le cas, vous pouvez les télécharger et les installer à partir de leurs sites web officiels.
 
-### `npm run build`
+2. Clonez le dépôt du projet sur votre machine locale.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Naviguez vers le répertoire du projet à l'aide de la commande `cd`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Installez les dépendances du projet en exécutant la commande `yarn`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Lancement du projet
 
-### `npm run eject`
+1. Pour lancer le projet, exécutez la commande `yarn start` dans le répertoire du projet.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Ouvrez votre navigateur web et accédez à `http://localhost:3000` pour voir le projet en action.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Note: Si vous rencontrez des problèmes lors de l'installation des dépendances ou du lancement du projet, veuillez consulter la documentation officielle de React et Yarn pour obtenir de l'aide.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributeurs
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Ce projet a été réalisé par une équipe de passionnés de technologie de l'Ecole de Management et d'Innovation Technologique de l'univesité de Fianaransta. Nous sommes toujours ouverts à de nouvelles idées et contributions.
 
-## Learn More
+## Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Si vous avez des questions ou des suggestions, n'hésitez pas à nous contacter.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Nous espérons que vous apprécierez d'utiliser notre système autant que nous avons aimé le développer !
