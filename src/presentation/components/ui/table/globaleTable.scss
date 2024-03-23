@@ -1,0 +1,74 @@
+.globale-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    border-radius: 10px;
+
+    thead{
+        background-color: var(--greyColor);
+        font-size: 12px; 
+
+        tr{
+            th{
+                &:first-child{
+                    border-radius: 10px 0px 0px 0px;
+                }
+
+                &:last-child{
+                    border-radius: 0px 10px 0px 0px;
+                }
+            }
+        }  
+    }
+
+    .empty-cell{
+        .custom-empty-cell{
+            background-color: var(--greyColor);
+            padding: 20px;
+            text-align: center;
+            height: 70vh;
+            font-size: 30px;
+            border-radius: 0px 0px 10px 10px;
+        }
+    }
+
+    .custom-table-header {
+        padding: 20px;
+      }
+      
+      .custom-table-row {
+        color: var(--darkFontColor);
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+        td{
+            padding: 15px;       
+        }
+
+        &:nth-child(even){
+            background-color: grey;
+        }
+      }
+      
+      .custom-table-cell {
+        border: none;
+        background-color: var(--fillInput);
+        padding: 10px;
+        color: var(--darkFontColor);
+        font-size: 13px;
+
+        max-width: 20px;
+
+        button{
+            background-color: rgba(0, 0, 0, 0);
+        }
+      }
+}
+
+
+.checkbox-global{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: red;
+  }
+  
