@@ -1,12 +1,16 @@
 .explore-header {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
+  // position: absolute;
+  // top: 0px;
+  // left: 0px;
+  // right: 0px;
   z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  .explore-header-content{
+    border-bottom: 2px rgba(245, 247, 250, 0.9);
+  }
 
   .w-p95 {
     display: flex;

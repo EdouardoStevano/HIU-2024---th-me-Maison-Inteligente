@@ -16,7 +16,7 @@ import ConnectionStatus from "presentation/components/component/connexionStatus/
 import { checkmode } from "presentation/utils/theme/checkmode";
 
 // importation des routes de redirection
-const Loader = lazy(() => import('presentation/pages/redirect/loader'))
+const Loader = lazy(() => import('presentation/pages/redirect/loader/loader'))
 const UnauthorizedPage = lazy(() => import('presentation/pages/redirect/unauthorized'))
 
 // Principal route imporatation

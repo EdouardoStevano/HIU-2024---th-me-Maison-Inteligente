@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 // Main pages importation
 const MainPage = lazy(() => import('presentation/pages/main'))
 // const HomeSection = lazy(() => import('pages/main/content/home/mainHome'))
-const Loader = lazy(() => import('presentation/pages/redirect/loader'))
+const Loader = lazy(() => import('presentation/pages/redirect/loader/loader'))
 
 function MainRoutes() {
   return (

@@ -1,19 +1,71 @@
 .middle-explore{
     display: flex;
-    height: 100vh;
+    height: 100%;
     z-index: 1;
     flex-direction: column;
     justify-content: space-around;
-
-    .cityExplore{
-        position: absolute;
-        top: 0px;
-        height: 100vh;
-        width: 100vw;
-        overflow: auto;
-        z-index: 1;
-        // background-color: red;
+    
+    .head-exp{
+        display: flex;
+        justify-content: space-between;
     }
+
+    .view-switch {
+        display: flex;
+        margin-left: auto;
+        background-color: var(--fillInput);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 22px;
+        padding: 4px;
+      }
+      
+      .view-switch button {
+        border-radius: 100%;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 6px 10px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .view-switch button.active {
+        border-radius: 100%;
+        background-color: var(--primaryColor);
+        color: #fff; /* Couleur du texte pour le bouton actif */
+      }
+      
+
+    .middle-explore-content{
+        height: 100%;
+        width: 76%;
+        padding: 20px 100px;
+
+        .title-city{
+            width: 70%;
+            
+            h1{
+                font-size: 20px;
+            }
+
+            p{
+                font-size: 13px;
+            }
+        }
+
+        .cityExplore{
+            overflow: auto;
+            width: 100%;
+            z-index: 1;
+            height: 100%;
+
+            .house{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
 
     .exploreTitle.visible{
         display: block;
@@ -25,7 +77,6 @@
 
     .toggle-btn-collapse{
         position: absolute;
-        background-color: red;
         top: 150px;
         border-radius: 6px;
         background-color: var(--darkColorTransparent);

@@ -1,5 +1,20 @@
 .explore{
     color: var(--darkFontColor);
     height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     background-image: url('../../assets/branding/background/EDS_point_white.png');
+
+    .head-explore{
+        height: 85px;
+    }
+
+    .content-explore{
+        height: 100%;
+    }
+
+    .foot-explore{
+        height: 85px;
+    }
 }

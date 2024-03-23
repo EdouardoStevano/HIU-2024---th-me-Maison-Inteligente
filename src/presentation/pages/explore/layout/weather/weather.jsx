@@ -44,7 +44,7 @@ function Weather() {
 
   // Vérifiez si les données météo ont été récupérées avant de les afficher
   if (!weatherData) {
-    return <div className='weather-container'>Chargement du méteo...</div>;
+    return <div className='weather-container'>Chargement des données...</div>;
   }
 
   const handleCityName = (e) => {

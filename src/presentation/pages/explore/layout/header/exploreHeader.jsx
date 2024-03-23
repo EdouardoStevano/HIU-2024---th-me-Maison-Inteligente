@@ -80,7 +80,7 @@ function ExploreHeader() {
   };
   return (
     <div className="explore-header">
-      <div className="w-p95 pad-top-px20 pad-bottom-px20">
+      <div className="w-p95 pad-top-px20 pad-bottom-px10 explore-header-content">
         <div className="left-head">
           <div className="logo">
             {/* <img src={LogoIcon} alt="logo" className="marge-right-px10" /> */}
