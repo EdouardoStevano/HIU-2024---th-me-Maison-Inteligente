@@ -4,8 +4,8 @@ import {
   createCustomMessage,
 } from "react-chatbot-kit";
 
-import image from "../../../assets/branding/img/400x500/kid-1837375_640.png";
-import iconsClose from "../../../assets/icon/png/icons8_close_16px.png";
+import image from "presentation/assets/branding/img/400x500/kid-1837375_640.png";
+import iconsClose from "presentation/assets/icon/png/icons8_close_16px.png";
 import Overview from "../widget/Overview";
 
 import Fligth from "../customMessage/Fligth.jsx";

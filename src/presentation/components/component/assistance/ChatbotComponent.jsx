@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/__chatBot.css";
 import { Chatbot, Message, Action } from "react-chatbot-kit";
 import "react-chatbot-kit/build/main.css";
-import iconsChat from "../../assets/icon/png/icons8_chat_16px_1.png";
+import iconsChat from "presentation/assets/icon/png/icons8_chat_16px_1.png";
 
 import config from "./config/config";
 import MessageParser from "./config/MessageParser";

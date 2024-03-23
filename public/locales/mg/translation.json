@@ -1,0 +1,27 @@
+{
+    "navbar": {
+      "home": "Fandraisana",
+      "about": "Momba",
+      "solution": "toro-hevitra",
+      "school": "Sekoly",
+      "contact": "Hiantso",
+      "signIn": "Hiditra",
+      "signUp": "Hisoratra anarana",
+      "mode": "Maizina"
+    },
+
+    "banner": {
+      "lTitle": "Mampifandray ny Ankehitriny amin'ny Androany",
+      "bTitle1": "Mampahery",
+      "bTitle2": "tanàna",
+      "bTitle3": "ho",
+      "bTitle4": "faritra",
+      "bTitle5": "ara-toekarena",
+      "bTitle6": "mahay",
+      "bTitle7": "ho an'ny rehetra",
+      "sTitle": "Miandraikitra ny hampifandray ny tanàna ho an'ny rehetra. Amin'ny fanampiana ny teknolojia vaovao, manao antso avo ny fiainam-pirenena eto an-tanàna ho an'ny rehetra, ary miaro ny sehatra maro isan-karazany.",
+      "bbtn1": "Momba ny manaraka",
+      "bbtn2": "Hiditra"
+    }
+  }
+  

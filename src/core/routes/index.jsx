@@ -38,17 +38,15 @@ i18n
   },
 });
 
-// Initialize query client
-const queryClient = new QueryClient()
-
 /*
 * Routes configuration
 */
 function RoutesConfig() {
     checkmode();
     return (
-        <QueryClientProvider client={queryClient}>
             <BrowserRouter>
+                <Suspense fallback={<Loader />}>
+
                 {/* Notification */}
                  <ToastContainer
                     position="top-right"
@@ -60,7 +58,6 @@ function RoutesConfig() {
                 {/* Statics components */}
                 <ConnectionStatus />
 
-                <Suspense fallback={<Loader />}>
                     {/* Pages Routes */}
                     <MainPage />
                     <AuthPage />
@@ -68,7 +65,6 @@ function RoutesConfig() {
                     <ExplorePage />
                 </Suspense>
             </BrowserRouter>
-        </QueryClientProvider>
   )
 }
 

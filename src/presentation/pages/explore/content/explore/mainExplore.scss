@@ -10,6 +10,90 @@
         justify-content: space-between;
     }
 
+    .float-btn-container{
+        .float-btn{
+            position: absolute;
+            display: flex;
+            width: 200px;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+            .basic-content{
+                display: flex;
+                align-items: center;
+            }
+
+            .text-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            &.collapse{
+                background-color: var(--fillInput);
+                padding: 20px;
+                transform: scale(1.2);
+                display: flex;
+                flex-direction: column;
+                border-radius: 20px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+                .state-content{
+                    transform: scale(1.1);
+                    margin-top: 20px;
+                    padding-top: 6px;
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+                    .state{
+                        font-size: 12px;
+                    }
+                    
+                    .statusColor{
+                        width: 40px;
+                        padding: 10px;
+                        border-radius: 100%;
+                        height: 40px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .title-float{
+                margin-left: 20px;
+            }
+
+            .circle{
+                display: flex;
+                align-items: center;
+                .cir1{
+                    background-color:  rgba(73, 177, 252, 0.47);
+                    width: 20px;
+                    border-radius: 100%;
+                    height: 20px;
+
+                    .cir-inner{
+                        background-color: rgba(41, 165, 253, 0.4);
+                        width: 45px;
+                        border-radius: 100%;
+                        height: 45px;
+                        position: relative;
+                        top: -13px;
+                        left: -12px;
+                        animation: 1s blinkOpacity infinite ease-in-out;
+                    }
+
+                    @keyframes blinkOpacity {
+                        0%{
+                            opacity: 0;
+                        }100%{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .view-switch {
         display: flex;
         margin-left: auto;

@@ -42,6 +42,8 @@ body {
 	overflow-x: hidden;
 	background-size: cover;
 	font-family: "Poppins", sans-serif;
+	cursor: url("../../branding/img/CURSOR.png"), auto;
+	cursor: hidden;
 }
 
 body.modal {

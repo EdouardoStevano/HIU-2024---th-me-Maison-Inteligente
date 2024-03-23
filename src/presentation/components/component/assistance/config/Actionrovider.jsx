@@ -1,7 +1,7 @@
 import React from "react";
 import Overview from "../widget/Overview";
 
-import Speak from "../../../hooks/useSpeak";
+import Speak from "presentation/hooks/useSpeak";
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const handleHello = () => {
     const botMessage = createChatBotMessage("Salut comment ça vas");

@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import './langSelection.scss'
 
 // importations des ressources
-import mgFlacg from '@assets/icon/svg/flags/1x1/mg.svg'
-import frFlacg from '@assets/icon/svg/flags/1x1/fr.svg' 
-import enFlacg from '@assets/icon/svg/flags/1x1/us.svg' 
-import arrowCollapse from '@assets/icon/png/icons8_expand_arrow_15px_1.png'
+import mgFlacg from 'presentation/assets/icon/svg/flags/1x1/mg.svg'
+import frFlacg from 'presentation/assets/icon/svg/flags/1x1/fr.svg' 
+import enFlacg from 'presentation/assets/icon/svg/flags/1x1/us.svg' 
+import arrowCollapse from 'presentation/assets/icon/png/icons8_expand_arrow_15px_1.png'
 
 
 
