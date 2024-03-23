@@ -1,0 +1,39 @@
+.didactiel-container .intro-didactiel {
+  z-index: 15;
+  position: absolute;
+  background-image: var(--linearColor1);
+  padding: 30px;
+  color: #fff;
+  bottom: 0px;
+  right: 0px;
+  width: 400px;
+  height: 250px;
+}
+.didactiel-container .intro-didactiel h1 {
+  position: relative;
+  top: -40px;
+}
+.didactiel-container .intro-didactiel p {
+  font-size: 13px;
+  position: relative;
+  top: -30px;
+}
+.didactiel-container .intro-didactiel span {
+  position: relative;
+  top: -25px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.close-icon {
+  color: #fff;
+  position: relative;
+  top: -10px;
+  right: -320px;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  background-color: var(--fillInput);
+  border-radius: 4px;
+  color: var(--primaryColor);
+}/*# sourceMappingURL=didacticiel.css.map */

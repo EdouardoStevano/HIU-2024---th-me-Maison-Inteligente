@@ -1,0 +1,247 @@
+.middle-explore {
+  display: flex;
+  height: 100%;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.middle-explore .head-exp {
+  display: flex;
+  justify-content: space-between;
+}
+.middle-explore .float-btn-container .float-btn {
+  position: absolute;
+  display: flex;
+  width: 200px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.middle-explore .float-btn-container .float-btn .basic-content {
+  display: flex;
+  align-items: center;
+}
+.middle-explore .float-btn-container .float-btn .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.middle-explore .float-btn-container .float-btn.collapse {
+  background-color: var(--fillInput);
+  padding: 20px;
+  transform: scale(1.2);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.middle-explore .float-btn-container .float-btn.collapse .state-content {
+  transform: scale(1.1);
+  margin-top: 20px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.middle-explore .float-btn-container .float-btn.collapse .state-content .state {
+  font-size: 12px;
+}
+.middle-explore .float-btn-container .float-btn.collapse .state-content .statusColor {
+  width: 40px;
+  padding: 10px;
+  border-radius: 100%;
+  height: 40px;
+  margin-right: 10px;
+}
+.middle-explore .float-btn-container .float-btn .title-float {
+  margin-left: 20px;
+}
+.middle-explore .float-btn-container .float-btn .circle {
+  display: flex;
+  align-items: center;
+}
+.middle-explore .float-btn-container .float-btn .circle .cir1 {
+  background-color: rgba(73, 177, 252, 0.47);
+  width: 20px;
+  border-radius: 100%;
+  height: 20px;
+}
+.middle-explore .float-btn-container .float-btn .circle .cir1 .cir-inner {
+  background-color: rgba(41, 165, 253, 0.4);
+  width: 45px;
+  border-radius: 100%;
+  height: 45px;
+  position: relative;
+  top: -13px;
+  left: -12px;
+  animation: 1s blinkOpacity infinite ease-in-out;
+}
+@keyframes blinkOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.middle-explore .view-switch {
+  display: flex;
+  margin-left: auto;
+  background-color: var(--fillInput);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+  padding: 4px;
+}
+.middle-explore .view-switch button {
+  border-radius: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.middle-explore .view-switch button.active {
+  border-radius: 100%;
+  background-color: var(--primaryColor);
+  color: #fff; /* Couleur du texte pour le bouton actif */
+}
+.middle-explore .middle-explore-content {
+  height: 100%;
+  width: 76%;
+  padding: 20px 100px;
+}
+.middle-explore .middle-explore-content .title-city {
+  width: 70%;
+}
+.middle-explore .middle-explore-content .title-city h1 {
+  font-size: 20px;
+}
+.middle-explore .middle-explore-content .title-city p {
+  font-size: 13px;
+}
+.middle-explore .middle-explore-content .cityExplore {
+  overflow: auto;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+}
+.middle-explore .middle-explore-content .cityExplore .house {
+  width: 100%;
+  height: 100%;
+}
+.middle-explore .exploreTitle.visible {
+  display: block;
+}
+.middle-explore .exploreTitle.hidden {
+  display: none;
+}
+.middle-explore .toggle-btn-collapse {
+  position: absolute;
+  top: 150px;
+  border-radius: 6px;
+  background-color: var(--darkColorTransparent);
+  padding: 5px 10px;
+  left: 200px;
+  transition: 0.5s;
+  cursor: pointer;
+  z-index: 30;
+}
+.middle-explore .toggle-btn-collapse:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+.middle-explore .exploreTitle {
+  position: relative;
+  left: 200px;
+  z-index: 2;
+  width: 500px;
+  animation: 1s zoom ease-in-out;
+}
+.middle-explore .guide-navigation {
+  width: 200px;
+  position: relative;
+  left: 0%;
+  margin-top: 30px;
+}
+.middle-explore .guide-navigation .direction {
+  padding: 20px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.middle-explore .guide-navigation .direction.up {
+  background-color: var(--scrollColor);
+  width: 50px;
+  position: relative;
+  left: 40%;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 3px;
+}
+.middle-explore .guide-navigation .direction.up span {
+  position: relative;
+  top: -60px;
+  left: 40%;
+  background-color: var(--color1);
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.middle-explore .guide-navigation .direction.down {
+  background-color: var(--scrollColor);
+  width: 50px;
+  position: relative;
+  left: 40%;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 3px;
+}
+.middle-explore .guide-navigation .direction.down span {
+  position: relative;
+  top: -60px;
+  left: 7px;
+  background-color: var(--color1);
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.middle-explore .guide-navigation .horizontal {
+  display: flex;
+  justify-content: space-between;
+}
+.middle-explore .guide-navigation .horizontal .right {
+  background-color: var(--scrollColor);
+  width: 50px;
+  position: relative;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 3px;
+}
+.middle-explore .guide-navigation .horizontal .right span {
+  position: relative;
+  top: -60px;
+  left: 40%;
+  background-color: var(--color1);
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.middle-explore .guide-navigation .horizontal .left {
+  background-color: var(--scrollColor);
+  width: 50px;
+  position: relative;
+  left: 10px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 3px;
+}
+.middle-explore .guide-navigation .horizontal .left span {
+  position: relative;
+  top: -60px;
+  left: 40%;
+  background-color: var(--color1);
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}/*# sourceMappingURL=mainExplore.css.map */

@@ -1,0 +1,252 @@
+.explore-header {
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.explore-header .explore-header-content {
+  border-bottom: 2px rgba(245, 247, 250, 0.9);
+}
+.explore-header .w-p95 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.explore-header .left-head {
+  display: flex;
+  align-items: center;
+}
+.explore-header .left-head .logo {
+  z-index: 5;
+  width: 200px;
+  display: flex;
+  text-align: center;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+}
+.explore-header .left-head .logo svg {
+  padding: 5px;
+  fill: #fff;
+  border-radius: 7px;
+  background-color: var(--primaryColor);
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+.explore-header .left-head .logo span {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--darkFontColor);
+}
+.explore-header .left-head .search-bar {
+  background-color: var(--whiteColorTransparent);
+  border-radius: 40px;
+  display: flex;
+  background-color: var(--fillInput);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  align-items: center;
+}
+.explore-header .left-head .search-bar svg {
+  padding: 5px;
+  stroke: var(--darkFontColor);
+  border-radius: 7px;
+  width: 30px;
+  height: 30px;
+  margin: 0px 8px;
+}
+.explore-header .left-head .search-bar input {
+  color: var(--darkFontColor);
+  padding: 10px;
+  border: none;
+  background: transparent;
+}
+.explore-header .left-head .search-bar button {
+  padding: 10px 30px;
+  border-radius: 40px;
+  cursor: pointer;
+  color: #fff;
+  background-image: var(--linearColor1);
+}
+.explore-header .left-head .search-bar button:hover {
+  background-color: var(--primaryColor);
+}
+.explore-header .right-header {
+  display: flex;
+  align-items: center;
+}
+.explore-header .right-header .shorcut .shorcut-link {
+  padding: 6px 0px;
+  color: var(--darkFontColor);
+  font-size: 13px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  border-bottom: 1px solid rgba(224, 224, 255, 0);
+}
+.explore-header .right-header .shorcut .shorcut-link:hover {
+  border-bottom: 1px solid var(--primaryColor);
+}
+.explore-header .right-header .icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 20px;
+}
+.explore-header .right-header .icons .svg-container-explore {
+  position: relative;
+}
+.explore-header .right-header .icons .svg-container-explore .rounded {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: crimson;
+  left: 10px;
+  top: 5px;
+  border-radius: 100%;
+}
+.explore-header .right-header .icons .svg-container-explore .notification-container {
+  min-width: 400px;
+  max-width: 400px;
+  position: absolute;
+  left: -160px;
+  background-color: var(--fillInput);
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--darkFontColor);
+}
+.explore-header .right-header .icons .svg-container-explore .notification-container svg {
+  position: relative;
+}
+.explore-header .right-header .icons .svg-container-explore .voice-assistant {
+  background-color: crimson;
+  min-width: 200px;
+  min-height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.explore-header .right-header .icons .svg-container-explore svg {
+  padding: 4px;
+  width: 35px;
+  height: 35px;
+  stroke: var(--darkFontColor);
+  margin: 0px 5px;
+  border: solid 2px rgba(245, 247, 250, 0.06);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.explore-header .right-header .icons .svg-container-explore svg:hover {
+  background-color: var(--primaryColor);
+  border: solid 2px rgba(245, 247, 250, 0);
+}
+.explore-header .right-header .icons .svg-container-explore2 .voice-assistant {
+  background-color: var(--fillInput);
+  color: var(--darkFontColor);
+  min-width: 200px;
+  width: 50%;
+  height: 80vh;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 10px;
+}
+.explore-header .right-header .icons .svg-container-explore2 .voice-assistant .close {
+  position: absolute;
+  right: 0px;
+  top: 0;
+}
+.explore-header .right-header .icons .svg-container-explore2 svg {
+  padding: 4px;
+  width: 35px;
+  height: 35px;
+  stroke: var(--darkFontColor);
+  margin: 0px 5px;
+  border: solid 2px rgba(245, 247, 250, 0.06);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.explore-header .right-header .icons .svg-container-explore2 svg:hover {
+  background-color: var(--primaryColor);
+  border: solid 2px rgba(245, 247, 250, 0);
+}
+.explore-header .right-header .account {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.explore-header .right-header .account .avatar {
+  margin: 0px 15px 0px 10px;
+  border-radius: 20px;
+  width: 40px;
+  font-size: 7px;
+}
+.explore-header .right-header .account .info {
+  display: flex;
+  flex-direction: column;
+}
+.explore-header .right-header .account .info p {
+  margin-top: 10px;
+}
+.explore-header .right-header .account .info small:first-child {
+  opacity: 1;
+  font-size: 14px;
+  color: var(--darkFontColor);
+}
+.explore-header .right-header .account .drop-downAvatar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  top: 50px;
+  right: 0px;
+  width: 200px;
+  height: auto;
+  background-color: var(--fillInput);
+  border-radius: 10px;
+  padding: 10px;
+}
+.explore-header .right-header .account .drop-downAvatar .user-rac {
+  padding: 10px;
+  border-radius: 10px;
+}
+.explore-header .right-header .account .drop-downAvatar .user-rac:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+  cursor: pointer;
+}
+
+.suggestions {
+  position: absolute;
+  top: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.09);
+  z-index: 1;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestion-item:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+
+.no-results {
+  padding: 20px;
+}/*# sourceMappingURL=exploreHeader.css.map */

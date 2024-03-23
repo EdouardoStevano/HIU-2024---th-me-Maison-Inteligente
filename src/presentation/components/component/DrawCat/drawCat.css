@@ -1,0 +1,8 @@
+.svg-container-draw svg path {
+  stroke: var(--darkFontColor);
+}
+
+.svg-container-draw svg {
+  width: 110%;
+  height: 120%;
+}/*# sourceMappingURL=drawCat.css.map */

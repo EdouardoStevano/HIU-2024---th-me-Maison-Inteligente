@@ -1,0 +1,39 @@
+.content-demmmande {
+  width: 500px;
+  background-color: var(--fillInput);
+  border-radius: 30px;
+  height: 600px;
+  padding: 40px;
+  color: var(--darkFontColor);
+}
+.content-demmmande h3 {
+  text-align: center;
+}
+.content-demmmande .header-demmande {
+  width: 80%;
+  margin: 30px auto 30px;
+}
+.content-demmmande .header-demmande p {
+  text-align: center;
+}
+.content-demmmande .body-demmande {
+  margin: 20px 0px;
+}
+.content-demmmande .footer-demmande {
+  margin-top: 100px;
+}
+.content-demmmande .footer-demmande .signature-bloc {
+  float: right;
+}
+.content-demmmande .footer-demmande .signature-bloc p {
+  text-align: end;
+}
+.content-demmmande .footer-demmande .signature-bloc .signature-container {
+  width: 140px;
+  height: 100px;
+  padding: 10px;
+}
+.content-demmmande .footer-demmande .signature-bloc .signature-container img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=demmandeGennnerer.css.map */

@@ -1,0 +1,17 @@
+.explore {
+  color: var(--darkFontColor);
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: url("../../assets/branding/background/EDS_point_white.png");
+}
+.explore .head-explore {
+  height: 85px;
+}
+.explore .content-explore {
+  height: 100%;
+}
+.explore .foot-explore {
+  height: 85px;
+}/*# sourceMappingURL=style.css.map */

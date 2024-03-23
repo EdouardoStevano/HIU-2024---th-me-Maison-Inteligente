@@ -1,0 +1,84 @@
+.background-3d {
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  animation: 5s float_Animation1 infinite ease-in-out;
+}
+.background-3d .object1 {
+  position: absolute;
+  top: 200px;
+  left: 60px;
+  animation: 1s zoom ease-out;
+  animation-delay: 0.1;
+}
+.background-3d .object2 {
+  position: absolute;
+  top: 330px;
+  right: 90px;
+  animation: 1s zoom ease-out;
+  animation-delay: 0.2;
+}
+.background-3d .object3 {
+  position: absolute;
+  top: 30px;
+  right: 90px;
+  filter: blur(5px);
+  animation: 1s zoom ease-out;
+  animation-delay: 0.3;
+}
+.background-3d .object4 {
+  position: absolute;
+  top: 710px;
+  right: -200px;
+  filter: blur(15px);
+  animation-delay: 0.3;
+}
+.background-3d .object5 {
+  position: absolute;
+  top: 2000px;
+  right: -200px;
+  filter: blur(15px);
+  animation-delay: 0.3;
+}
+.background-3d .object6 {
+  position: absolute;
+  top: 2400px;
+  left: -150px;
+  filter: blur(10px);
+  animation-delay: 0.3;
+}
+.background-3d .object7 {
+  position: absolute;
+  top: 3000px;
+  left: 200px;
+  animation-delay: 0.3;
+}
+.background-3d .object8 {
+  position: absolute;
+  top: 3300px;
+  right: 120px;
+  filter: blur(10px);
+  animation-delay: 0.3;
+}
+.background-3d .object9 {
+  position: absolute;
+  top: 3500px;
+  left: -250px;
+  filter: blur(10px);
+  animation-delay: 0.3;
+}
+.background-3d .user2 {
+  position: absolute;
+  top: 280px;
+  right: 200px;
+  animation: 1s zoom ease-out;
+  animation-delay: 0.3;
+}
+.background-3d .user1 {
+  position: absolute;
+  top: 530px;
+  left: 280px;
+  animation: 1s zoom ease-out;
+  animation-delay: 0.4;
+}/*# sourceMappingURL=background3D.css.map */
