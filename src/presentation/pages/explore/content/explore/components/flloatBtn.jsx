@@ -15,7 +15,7 @@ const FloatButton = ({ title, statusColor, content, positionX, positionY }) => {
         <div className={`float-btn ${active ? 'collapse' : ''}`} onMouseEnter={handleHover}
         onMouseLeave={handleLeave}>
         <div className="basic-content">
-            <div className="circle">
+            <div className="circle" style={{ backgroundColor: statusColor, color: statusColor, borderRadius: "100%" }}>
             <div className="cir1">
                 <div className="cir-inner"></div>
             </div>
@@ -28,7 +28,7 @@ const FloatButton = ({ title, statusColor, content, positionX, positionY }) => {
             <div className="state-content">
             <h4>Status :</h4>
             <span className="state">
-                    <span className="statusColor" style={{ backgroundColor: statusColor, color: statusColor }}>s</span>
+                    {/* <span className="statusColor" style={{ backgroundColor: statusColor, color: statusColor }}>s</span> */}
                     {content}
                     </span>
                 </div>

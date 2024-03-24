@@ -18,19 +18,44 @@ function MainExplore() {
   const floatButtonsData = [
     {
       id: 1,
-      title: "Button 1",
+      title: "Climatisation",
       statusColor: "#ff0000", // couleur rouge
-      content: "Contenu du bouton 1",
+      content: "arrêté",
       positionX: "670px",
       positionY: "500px"
     },
     {
       id: 2,
-      title: "Climatisation",
+      title: "Porte1",
+      statusColor: "#ff0000", // couleur verte
+      content: "Arrêté",
+      positionX: "450px",
+      positionY: "400px"
+    },
+    {
+      id: 3,
+      title: "Porte2",
+      statusColor: "#ff0000", // couleur verte
+      content: "Arrêté",
+      positionX: "340px",
+      positionY: "340px"
+    },
+    {
+      id: 4,
+      title: "lumière1",
       statusColor: "#00ff00", // couleur verte
-      content: "Contenu du bouton 2",
+      content: "En cours",
       positionX: "500px",
-      positionY: "500px"
+      positionY: "340px"
+    },
+
+    {
+      id: 5,
+      title: "lumière2",
+      statusColor: "#00ff00", // couleur verte
+      content: "En cours",
+      positionX: "700px",
+      positionY: "340px"
     },
     // Ajoutez plus d'objets de données au besoin
   ];
@@ -121,7 +146,7 @@ function MainExplore() {
 
           <Suspense fallback={<div>loadingData</div>}>
             {/* <Spline scene="https://prod.spline.design/O4TqeLAlb3FpxcfI/scene.splinecode" className="house" onLoad={onLoad}/> */}
-            {/* <Spline scene="https://prod.spline.design/uAQq7dUAAi5RLLkq/scene.splinecode" onLoad={onLoad} /> */}
+            <Spline scene="https://prod.spline.design/uAQq7dUAAi5RLLkq/scene.splinecode" onLoad={onLoad} />
           </Suspense>
         </div>
       </div>

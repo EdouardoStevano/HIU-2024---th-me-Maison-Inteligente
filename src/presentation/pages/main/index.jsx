@@ -13,6 +13,8 @@ import __MAIN_FOOTER__ from "presentation/pages/main/layout/footer/mainFooter";
 
 // Components importation
 import ScroolToTop from "presentation/components/component/scrollToTop/scrollToTop";
+import axios from "axios";
+import { IP_API } from "presentation/utils/config";
 
 function Main() {
   const [heigth, setheigth] = useState(true);
@@ -28,6 +30,14 @@ function Main() {
 
   useEffect(() => {
     AOS.init();
+        axios.get(IP_API+"item")
+        .then((res)=>{
+            console.log("res ", res.data);
+            // const isOn = res.data.status
+            // toast.success(isOn ? "Lampe est allumée " : "Lampe est éteinte")
+        })
+        .catch(err => console.log("err ", err))
+
   }, []);
 
   return (

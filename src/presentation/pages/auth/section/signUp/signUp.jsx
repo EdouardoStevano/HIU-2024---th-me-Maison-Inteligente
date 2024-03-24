@@ -1,5 +1,5 @@
 import React, { useState as state} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // styles importation
 import './__signUpStyle.scss'
@@ -11,6 +11,7 @@ import doneIcon from 'presentation/assets/icon/png/icons8_ok_60px.png'
 import cancelIcon from 'presentation/assets/icon/png/icons8_cancel_60px.png'
 import loadIcon from 'presentation/assets/icon/png/icons8_stream_60px.png'
 import SignUpImage from 'presentation/assets/branding/SignUp_Image.png'
+import { toast } from 'react-toastify';
 
 function SignUp() {
   const [inputText, setInputText] = state('');
@@ -18,6 +19,8 @@ function SignUp() {
   const [text, setText] = state('');
   const [isValid, setIsValid] = state(false);
   const [isLoading, setIsLoading] = state(false);
+
+  const nav = useNavigate()
 
   const handleEmojiClick = (emoji) => {
     setSelectedEmoji(emoji);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import VoiceVisualizer from "./voiceVisualizer";
 import "./speechTotexte.scss";
+
 const SpeechTotexte = () => {
   const voiceVisualizer = new VoiceVisualizer();
   const [result, setResult] = useState("");
@@ -69,6 +70,7 @@ const SpeechTotexte = () => {
       recognition.onspeechend = () => {
         speechToText();
       };
+      
 
       recognition.onerror = (event) => {
         isrecording(false);
@@ -114,20 +116,15 @@ const SpeechTotexte = () => {
     recognition.stop();
   }
   return (
+    <div className="vocal-assistance">
     <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-      className="speeche-bloc"
+      className="speech-bloc"
     >
       <h1>Assistante Vocale</h1>
       <div id="visualizer-container">
         <canvas id="output" width="250" height="200"></canvas>
       </div>
-      <button onClick={recordbtn}>
+      <button onClick={recordbtn} className="btn-voice">
         <div className={`container-svg-btn ${recording ? "active" : ""}`}>
           <svg
             width="800px"
@@ -180,7 +177,8 @@ const SpeechTotexte = () => {
         </div>
         {recording ? "Arreter" : "Parler"}
       </button>
-      <h1>{result}</h1>
+      <p className="rqt">Votre requête : {result}</p>
+    </div>
     </div>
   );
 };

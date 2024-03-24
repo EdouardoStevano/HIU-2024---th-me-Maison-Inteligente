@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import CardMunicipales from "./component/card/CardMunicipales";
+import ModalIA from "presentation/components/component/modal/myModalLarge";
 
 import img from "../../../../assets/branding/img/480x320/img10.jpg";
 import img20 from "../../../../assets/branding/img/480x320/img20.jpg";
@@ -15,10 +16,14 @@ import img25 from "../../../../assets/branding/img/480x320/img25.jpg";
 import securite from "../../../../assets/branding/img/480x320/securite.png";
 import img11 from "../../../../assets/branding/img/480x320/img11.jpg";
 import img36 from "../../../../assets/branding/img/480x320/img36.jpg";
+import axios from "axios";
 function SpeedLink() {
+  
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isXExpanded, setIsXExpanded] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [showLargeModal, setShowLargeModal] = useState(false);
+
 
   const toggleX = () => {
     setIsXExpanded(!isXExpanded);
@@ -38,6 +43,47 @@ function SpeedLink() {
   const handleMouseLeave = () => {
     setIsMenuVisible(false);
   };
+
+  const [sensorData, setSensorData] = useState(null);
+
+  /*
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://127.0.0.1:3000/arduino', {
+          method: 'GET',
+          mode: 'cors', // Assurez-vous d'ajouter cette option
+          headers: {
+            'Content-Type': 'application/json',
+            // Autres en-têtes si nécessaire
+          },
+        })
+        const data = await response.json();
+        setSensorData(data.data);
+      } catch (error) {
+        console.error('Erreur lors de la récupération des données :', error);
+      }
+    };
+
+    // Appeler fetchData initialement
+    fetchData();
+
+    // Mettre en place l'intervalle pour actualiser les données toutes les 5 secondes
+    const interval = setInterval(fetchData, 5000);
+
+    // Nettoyer l'intervalle lors du démontage du composant
+    return () => clearInterval(interval);
+  }, []);
+  */
+
+  // For large modal
+    const openLargeModal = () => {
+    setShowLargeModal(true);
+    };
+
+    const closeLargelModal = () => {
+        setShowLargeModal(false);
+    };
 
   const Municipales = [
     {
@@ -115,7 +161,7 @@ function SpeedLink() {
             <div className={"speedLink-content"}>
               <div className="globalMap">
                 <div className="globalMap-content">
-                  <h1>Explorer votre ville</h1>
+                  <h1>Moderniser votre vie quotidien</h1>
                   <small>
                     Naviguer à travers notre carte de la ville bien dataillé,
                     consulter votre destination avant même de s'y rendre.
@@ -126,79 +172,34 @@ function SpeedLink() {
                 </div>
               </div>
 
-              <h1>Exploration :</h1>
-              <small>Choisissez le lieux que vous voulez explorer.</small>
-
-              <div className="location-container">
-                <Link to={'/map/path'} class="category">TRAJET</Link>
-                <Link to={'/map/hopitals'} class="category">HÔPITAL</Link>
-                <Link to={'/map/path'} class="category">SÉCURITÉ</Link>
-                <span to={'/map/ecole'} class="category">ÉCOLE</span>
-                <span to={'/map/pharmacie'} class="category">PHARMACIE</span>
-                <span to={'/map/path'} class="category">BOUTIQUE</span>
-                <span to={'/map/path'} class="category">BÂTIMENT ADMINISTRATIF</span>
-                <span to={'/map/path'} class="category">STATION ESSENCE</span>
-                <span to={'/map/path'} class="category">CIMETIÈRE</span>
-                <span to={'/map/path'} class="category">BAR</span>
-                <span to={'/map/path'} class="category">SECOURS</span>
-                <span to={'/map/path'} class="category">TOILETTE PUBLIC</span>
-                <span to={'/map/path'} class="category">KIOSQUE</span>
-                <span to={'/map/path'} class="category">HOTELS & RESATURANTS</span>
-                <span to={'/map/casino'} class="category">CASINO</span>
-                <span to={'/map/airport'} class="category">AÉROPORT</span>
-                <span to={'/map/restaurant'} class="category">RESTAURANT</span>
-                <span to={'/map/cyber'} class="category">CYBER CAFE</span>
+              {/* <h1>Mes capteurs :</h1> */}
+              <div className="capterCard">
+                <div className="capterCard-container">
+                  <h1>Données du capteur</h1>
+                  <div className="capterCard-card">
+                    {sensorData && (
+                      <div>
+                        <h2>Température</h2>
+                        <p>{sensorData.temperature} °C</p>
+                      </div>
+                    )}
+                  </div>
+                  <div className="card">
+                    {sensorData && (
+                      <div>
+                        <h2>Humidité</h2>
+                        <p>{sensorData.humidity} %</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
+              <small>Options :</small>
 
-              <h1>Services :</h1>
-              <small>Choisissez le lieux que vou voulez explorer.</small>
-              <div className="location-container">
-                <span onClick={handleclickDialogMunicipale} class="category">
-                  Municipales
-                </span>
-                <span class="category">Juridiques</span>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      {openDialog && (
-        <div className="">
-          <div className="back-drop"></div>
-          <div className="dialog-municipales">
-            <div className="Close" onClick={handleCloseDialogMunicipale}>
-              <svg
-                width="800px"
-                height="800px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="Menu / Close_SM">
-                  <path
-                    id="Vector"
-                    d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-              </svg>
-            </div>
-            <div className="bloc-choix-municipales">
-              {Municipales.map((municipale, index) => (
-                <div className="card-maper" key={index}>
-                  <CardMunicipales
-                    img={municipale.image}
-                    title={municipale.title}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

@@ -78,7 +78,7 @@
   .globalMap {
     width: 100%;
     margin-top: 90px;
-    height: 500px;
+    height: 200px;
     background-image: url("../../../../assets/branding/img/pexels-catarina-sousa-68704.jpg");
     background-size: cover;
     border-radius: 20px;
@@ -87,6 +87,7 @@
       background-color: rgba(0, 0, 0, 0.3);
       height: 100%;
       padding: 20px 40px;
+      border-radius: 20px;
     }
   }
   .speedLink-menu.active.hidden,
@@ -445,4 +446,41 @@
       }
     }
   }
+}
+
+.capterCard {
+  display: flex;
+  justify-content: center;
+}
+
+.capterCard-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.capterCard h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.capterCard-card {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.capterCard-card h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.capterCard-card p {
+  margin: 0;
+  font-size: 18px;
+  color: #666;
 }

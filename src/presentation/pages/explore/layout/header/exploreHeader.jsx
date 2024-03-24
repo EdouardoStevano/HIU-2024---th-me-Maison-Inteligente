@@ -2,9 +2,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import axios from 'axios';
 import SpeechTotexte from "presentation/components/component/speechtotexte/SpeechTotexte";
+import HandDetection from "../../components/handDetection";
+
 
 import data from './data.json';
 import "./exploreHeader.scss";
+
+import ModalLarge from 'presentation/components/component/modal/myModal';
+import MyModalLarge from 'presentation/components/component/modal/myModalLarge';
 
 // import LogoIcon from "/supericon.png";
 import CardNotification from "./content/card/CardNotification";
@@ -16,7 +21,9 @@ function ExploreHeader() {
   const [viewNotification, setViewNotification] = useState(false);
   const [viewAssistant, setViewAssistant] = useState(false);
   const [viewProfile, setViewProfile] = useState(false);
-;
+  const [showLargeModal, setShowLargeModal] = useState(false);
+  
+
 
   const [searchValue, setSearchValue] = useState('');
   const navigate = useNavigate();
@@ -29,6 +36,15 @@ function ExploreHeader() {
       navigate.push(`/map/${selectedSuggestion.route}`);
     }
   };
+
+  // For large modal
+  const openLargeModal = () => {
+    setShowLargeModal(true);
+};
+
+const closeLargelModal = () => {
+    setShowLargeModal(false);
+};
 
   const logOut = async() =>{
     console.log("logout")
@@ -66,6 +82,18 @@ function ExploreHeader() {
       contenu: "faite attention veuillez rentrez chez vous",
     },
   ]);
+      const [showGestuModal, setShowGestuModal] = useState(false);
+
+
+  // For large modal
+  const openGestuModal = () => {
+    setShowGestuModal(true);
+};
+
+const closeGestuModal = () => {
+  setShowGestuModal(false);
+};
+
 
   const handlecloseNotif = (index) => {
     console.log(index);
@@ -80,6 +108,43 @@ function ExploreHeader() {
   };
   return (
     <div className="explore-header">
+
+      <ModalLarge isOpen={showLargeModal} onClose={closeLargelModal}>
+        <SpeechTotexte />
+      </ModalLarge>
+
+       <MyModalLarge isOpen={showGestuModal} onClose={closeGestuModal}>
+                <HandDetection/>
+          </MyModalLarge>
+
+      {viewAssistant && (
+                <div className="voice-assistant">
+                  
+                  <div className="close" onClick={handleClose}>
+                    <svg
+                      width="800px"
+                      height="800px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="24" height="24" fill="white" />
+                      <path
+                        d="M7 17L16.8995 7.10051"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7 7.00001L16.8995 16.8995"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              )}
       <div className="w-p95 pad-top-px20 pad-bottom-px10 explore-header-content">
         <div className="left-head">
           <div className="logo">
@@ -138,9 +203,9 @@ function ExploreHeader() {
 
         <div className="right-header">
           <div className="shorcut">
-          <Link to={'/explore'} className="shorcut-link">Accueil</Link>
-            <Link to={'/explore/actu'} className="shorcut-link">Actualités</Link>
-            <Link to={'/explore/game'} className="shorcut-link">Jeux</Link>
+          <button to={'/explore'} className="shorcut-link" onClick={()=>openGestuModal()}>Commande gestuelle</button>
+            {/* <Link to={'/explore/actu'} className="shorcut-link">Actualités</Link> */}
+            <Link to={'/explore/game'} className="shorcut-link">moment loisirs</Link>
           </div>
 
           <div className="icons">
@@ -194,7 +259,7 @@ function ExploreHeader() {
                 strokeWidth={1.5}
                 stroke="currentColor"
                 className="w-6 h-6"
-                onClick={handleclickAssistantVocale}
+                onClick={() => openLargeModal()}
               >
                 <path
                   strokeLinecap="round"
@@ -203,34 +268,7 @@ function ExploreHeader() {
                 />
               </svg>
 
-              {viewAssistant && (
-                <div className="voice-assistant">
-                  <SpeechTotexte />
-                  <div className="close" onClick={handleClose}>
-                    <svg
-                      width="800px"
-                      height="800px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="24" height="24" fill="white" />
-                      <path
-                        d="M7 17L16.8995 7.10051"
-                        stroke="#000000"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M7 7.00001L16.8995 16.8995"
-                        stroke="#000000"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              )}
+              
             </div>
           </div>
 
@@ -245,7 +283,7 @@ function ExploreHeader() {
             <img src={avatar} alt="" className="avatar" />
             <div className="info">
               <small>Edouardo Stevano</small>
-              <small>Citoyen</small>
+              <small>Resident</small>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 w-px20 marge-left-px10">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />

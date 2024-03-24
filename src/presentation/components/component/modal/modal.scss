@@ -116,9 +116,9 @@
 }
   
   .modal-close {
-    position: relative;
-    top: 5px;
-    left: 63vw;
+    position: absolute;
+    top: 25px;
+    right: 20px;
     z-index: 10;
     font-size: 30px;
     height: 40px;
@@ -136,10 +136,6 @@
      transform: scale(1.2);
   }
   
-  .modal-content {
-    position: relative;
-    top: -30px;
-  }
 
   @keyframes showCloseModal {
     0%{

@@ -1,5 +1,5 @@
 import {React, useState as state, useContext as context, useEffect as effect} from 'react';
-import {Link, useNavigate as navigate, useLocation as location, Navigate} from 'react-router-dom';
+import {Link, useNavigate as navigate, useLocation as location, Navigate, useNavigate} from 'react-router-dom';
 import { toast} from 'react-toastify';
 import axios from "axios";
 
@@ -26,10 +26,19 @@ function SignIn() {
   const [userpassword, setUserpassword] = state('');
   const [rememberMe, setRememberMe] = state(false);
 
+    const nav = useNavigate()
+
+
+
+  const login = (e) => {
+    nav("/explore");
+    toast.success("Vous êtes bien connecté")
+  };
+
+
   // const location = useLocation();
   const redirectPath = localStorage.getItem('urlToAccess') ? localStorage.getItem('urlToAccess') : '/explore' 
 
-  const nav = navigate()
 
   effect(() => {
     const storedEmail = localStorage.getItem('email');
@@ -132,12 +141,12 @@ function SignIn() {
           </div>
 
           <div className="passForget">
-            <Link to="/login/password/reset" className='link-passForget'>Mot de passe oublié?</Link>
+            <Link to="/auth/password/reset" className='link-passForget'>Mot de passe oublié?</Link>
           </div>
         </div>
 
         <div className="btn-group">
-          <button  type="button" className='btn-login'>Se connecter</button>
+          <Link to="/explore" onClick={login}  type="button" className='btn-login'>Se connecter</Link>
           <Link to="/auth/signup" className='btn-signUp'>Créer un compte</Link>
         </div>
 
