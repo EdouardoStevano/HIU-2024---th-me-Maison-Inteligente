@@ -3,7 +3,7 @@
     "home": "Accueil",
     "about": "A propos",
     "solution": "Solutions",
-    "school": "Ecole",
+    "school": "Problèmes",
     "contact": "Contact",
     "signIn": "Se connecter",
     "signUp": "Inscription",
@@ -12,22 +12,22 @@
 
   "banner": {
     "lTitle": "Connectons le présent au futur",
-    "bTitle1": "Surveillez",
+    "bTitle1": "Accédez à",
     "bTitle2": "votre maison",
     "bTitle3": "avec l'",
-    "bTitle4": "intélligence",
-    "bTitle5": "urbain",
-    "bTitle6": "intelligent",
+    "bTitle4": "l'intelligence",
+    "bTitle5": "à porté ",
+    "bTitle6": "de main",
     "bTitle7": "pour tous",
-    "sTitle": "Nous cherchons à rendre nos villes plus intelligentes, accessibles à tous. En utilisant des technologies novatrices, nous visons à améliorer la vie urbaine pour chacun, en créant des environnements durables et connectés.",
+    "sTitle": "Nous cherchons à rendre votre maison accessibles à tous. En utilisant des technologies novatrices, nous visons à améliorer la vie urbaine pour chacun, en créant des environnements durables et connectés.",
     "bbtn1": "en savoir plus",
     "bbtn2": "Commencer"
   },
 
   "about": {
     "lTitle": "A propos",
-    "Title": "Votre partenaire dans votre montée intellectuelle.",
-    "paragraphe1": "Votre passerelle vers l'avenir de l'éducation en ligne. Notre plateforme a été créée pour inspirer, éduquer et ouvrir de nouvelles opportunités pour tous ceux qui ont soif de connaissances. Que vous soyez un étudiant avide, un professionnel cherchant à élargir vos compétences, ou simplement quelqu'un qui souhaite apprendre quelque chose de nouveau, SIRIUS est là pour vous.",
+    "Title": "Votre partenaire pour une experience de vie plus optimale.",
+    "paragraphe1": "Bienvenue chez HESTIA, la révolution de la maison intelligente où confort, sécurité et innovation se rencontrent. Dans un monde où votre foyer doit être votre sanctuaire, HESTIA incarne la promesse d'une vie harmonieuse, intégrant les technologies les plus avancées pour transformer votre espace de vie en une expérience sur mesure. Chez HESTIA, nous croyons que chaque détail compte pour créer un environnement qui répond intuitivement à vos besoins, s'adaptant à votre rythme de vie pour vous offrir une tranquillité d'esprit inégalée. ",
     "info1": "Flexibilité d'Apprentissage<",
     "info2": "Cours Variés",
     "info3": "Recherche d'Ecoles",

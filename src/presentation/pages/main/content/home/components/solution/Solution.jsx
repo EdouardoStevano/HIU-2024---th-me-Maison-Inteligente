@@ -220,7 +220,7 @@ const Solution = () => {
                   className={`mobilité-bloc-1 ${viewSolution ? "active" : ""}`}
                 >
                   <div className="cube a"></div>
-                  <h1>Amélioration de la mobilité</h1>
+                  <h1>Gestion efficace de l'energie</h1>
 
                   <p>
                     révolutionner l'expérience utilisateur grâce à une
@@ -246,13 +246,15 @@ const Solution = () => {
                   className={`mobilité-bloc-3 ${viewSolution2 ? "active" : ""}`}
                 >
                   <div className="bloc-1 section-btl-3">
-                    <h1>Technologie centrée sur l'humain</h1>
+                    <h1>Contrôle personalisé du confort</h1>
                     <p>
                       Adopter des solutions technologiques qui placent les
                       besoins des citoyens au cœur de leur conception, visant à
                       simplifier les tâches quotidiennes et à améliorer la
                       qualité de vie de manière inclusive et accessible à tous.
                     </p>
+
+                    <h5>Assistance à domicile et à distance</h5>
                     <div className="imageContainer">
                     
                     </div>

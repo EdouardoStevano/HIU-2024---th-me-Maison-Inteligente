@@ -1,8 +1,8 @@
 import React from "react";
 import "./problem.scss";
 
-import image1 from "../../../../../../assets/branding/img/400x500/img26.jpg";
-import image2 from "../../../../../../assets/branding/img/400x500/img14.jpg";
+import image1 from "../../../../../../assets/branding/img/trano.jpg";
+import image2 from "../../../../../../assets/branding/img/beantitra.jpg";
 import image3 from "../../../../../../assets/branding/img/400x500/img17.jpg";
 
 import StyledCard from "./content/card/styledCard/StyledCard";

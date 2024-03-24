@@ -90,14 +90,13 @@ function Presentation() {
               "
             </h1>
             <p>
-            Imaginez un endroit où chaque rue devient votre alliée, où les lumières s'adaptent à votre passage et où les informations essentielles vous trouvent avant même que vous ne les cherchiez. Cet endroit existe dans une ville où la technologie anticipe vos besoins et où chaque instant est pensé pour simplifier votre quotidien.
+            la révolution de la maison intelligente où confort, sécurité et innovation se rencontrent. Dans un monde où votre foyer doit être votre sanctuaire, HESTIA incarne la promesse d'une vie harmonieuse, intégrant les technologies les plus avancées pour transformer votre espace de vie en une expérience sur mesure. 
             </p>
           </div>
 
           <Tilt options={tiltOptions}>
             <div className="presentation-title2">
-              <div className="inner">Cette réalité s'épanouit dans une ville où la technologie anticipe vos attentes.
-              Bienvenue dans un environnement où l'innovation se met au service de votre confort, où chaque détail est pensé pour vous offrir une expérience urbaine exceptionnelle."
+              <div className="inner">Chez HESTIA, nous croyons que chaque détail compte pour créer un environnement qui répond intuitivement à vos besoins, s'adaptant à votre rythme de vie pour vous offrir une tranquillité d'esprit inégalée
               </div>
             </div>
           </Tilt>

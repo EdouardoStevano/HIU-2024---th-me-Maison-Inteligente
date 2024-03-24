@@ -2,8 +2,8 @@ import React from "react";
 import "./ListProblem.scss";
 import { Tilt } from "react-tilt";
 
-import img21 from "../../../../../../assets/branding/img/pexels-oscar-portan-6837539.jpg";
-import img5 from "../../../../../../assets/branding/img/pexels-energepiccom-313690.jpg";
+import img21 from "../../../../../../assets/branding/img/trano.jpg";
+import img5 from "../../../../../../assets/branding/img/beantitra.jpg";
 import img3 from "../../../../../../assets/branding/img/400x500/img3.jpg";
 import DrawCat from "presentation/components/component/DrawCat/DrawCat";
 import SappinAnnimer from "presentation/components/component/sapinNoelAnnimer/SappinAnnimer";
@@ -39,7 +39,7 @@ const ListProblem = () => {
           <div className="message-content-list-problem" data-aos="zoom-in-up" data-aos-delay="1100">
             <div className="content-sticky-list-problem">
               <div className="title">
-                <h1><span>Problème de</span> mobilité : </h1>
+                <h1><span>Problème de</span> gestion d'energie : </h1>
                 {/* <p>Se révèle à travers les défis persistants liés aux transports en commun, aux embouteillages incessants, aux zones à risque et aux caprices météorologiques.</p> */}
               </div>
               
@@ -59,10 +59,10 @@ const ListProblem = () => {
           <div className="message-content-list-problem" data-aos="zoom-in-up" data-aos-delay="1100">
             <div className="content-sticky-list-problem">
               <div className="title">
-              <h1><span>Problème de</span>  disponibilité</h1>
+              <h1><span>Problème d'</span>  accessibilité et gestion de temps</h1>
               </div>
               <p>
-              L'accomplissement des tâches quotidiennes peut être sérieusement entravé par l'inaccessibilité de certains services à des moments particuliers, ajoutant ainsi une couche d'inégalité à l'accès pour tous, tout en étant également conditionné par la disponibilité individuelle..
+              L'accomplissement des tâches quotidiennes peut être sérieusement entravé par l'inaccessibilité de certains services à des moments particuliers, ajoutant ainsi une couche d'inégalité à l'accès pour tous, tout en étant également conditionné par la disponibilité individuelle.
               </p>
             </div>
           </div>

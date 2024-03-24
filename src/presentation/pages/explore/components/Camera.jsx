@@ -9,6 +9,7 @@ import ImageToFind2 from '../../../assets/image/lucasTraining/02.jpg'
 import ImageToFind3 from '../../../assets/image/lucasTraining/03.jpg'
 import ImageToFind4 from '../../../assets/image/lucasTraining/04.jpg'
 import ImageToFind5 from '../../../assets/image/lucasTraining/05.jpg'
+import { toast } from 'react-toastify';
 
 const imageTranings = [
     ImageToFind, ImageToFind1, ImageToFind2, ImageToFind3, ImageToFind4, ImageToFind5
@@ -103,9 +104,11 @@ const CameraComponent = () => {
                                     console.log(response.data);
                                     if(response.data.confidence >= 70){
                                         console.log("Il est là !");
+                                        toast.info("Il est là !")
                                     }
                                     else{
                                         console.log("Il est introuvable");
+                                        toast.info("Il est introuvable")
                                     }
                                 })
                                 .catch(error => {
