@@ -11,7 +11,7 @@ function getConfig(){
 
 export default getConfig
 
-export const IP_API = "http://192.168.80.1:3000/";
+export const IP_API = "http://192.168.80.222:3000/";
 export const headers = {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',

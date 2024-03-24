@@ -5,6 +5,7 @@ import gesture_recognizer_task from "../models/gesture_recognizer.task";
 import { useRef, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { IP_API } from "presentation/utils/config";
 
 function HandDetection() {
 
@@ -131,10 +132,10 @@ function HandDetection() {
         };
 
         startWebcam();
-        /*
+        
         const fetchData = async () => {
             try {
-                const response = await fetch(IP_API + 'item', {
+                const response = await fetch(IP_API + 'arduino', {
                     method: 'GET',
                     mode: 'cors', // Assurez-vous d'ajouter cette option
                     headers: {
@@ -150,8 +151,9 @@ function HandDetection() {
         };
 
         // Appeler fetchData initialement
-        // fetchData();
-        */
+        fetchData();
+        
+        const interval = setInterval(fetchData, 5000);
         return () => {
             if (videoRef.current && videoRef.current.srcObject) {
                 videoRef.current.srcObject.getTracks().forEach(track => track.stop());
@@ -160,16 +162,28 @@ function HandDetection() {
             if (animationFrameId) {
                 cancelAnimationFrame(animationFrameId);
             }
+            clearInterval(interval);
         };
 
 
         // Mettre en place l'intervalle pour actualiser les données toutes les 5 secondes
-        // const interval = setInterval(fetchData, 5000);
 
         // Nettoyer l'intervalle lors du démontage du composant
-        //return () => clearInterval(interval);
+        // return () => clearInterval(interval);
 
     }, []);
+
+      useEffect ( () => {
+          if(displayName === "Right"){
+            axios.get(IP_API+"item/status/65fedd5177dd785835893719")
+            .then((res)=>{
+                const isOn = res.data.data.status
+                toast.success(isOn ? "Lampe est allumée " : "Lampe est éteinte")
+            })
+            .catch(err => console.log("err ", err))
+        }
+
+      }, [displayName])
 
     return (
         <>
