@@ -16,13 +16,14 @@ import CardNotification from "./content/card/CardNotification";
 
 
 import avatar from 'presentation/assets/branding/img/400x500/img27.jpg'
+import CameraComponent from '../../components/Camera';
 
 function ExploreHeader() {
   const [viewNotification, setViewNotification] = useState(false);
   const [viewAssistant, setViewAssistant] = useState(false);
   const [viewProfile, setViewProfile] = useState(false);
   const [showLargeModal, setShowLargeModal] = useState(false);
-  
+
 
 
   const [searchValue, setSearchValue] = useState('');
@@ -40,16 +41,16 @@ function ExploreHeader() {
   // For large modal
   const openLargeModal = () => {
     setShowLargeModal(true);
-};
+  };
 
-const closeLargelModal = () => {
+  const closeLargelModal = () => {
     setShowLargeModal(false);
-};
+  };
 
-  const logOut = async() =>{
+  const logOut = async () => {
     console.log("logout")
 
-}
+  }
 
   const handleclickViewNotification = () => {
     setViewNotification(!viewNotification);
@@ -82,17 +83,26 @@ const closeLargelModal = () => {
       contenu: "faite attention veuillez rentrez chez vous",
     },
   ]);
-      const [showGestuModal, setShowGestuModal] = useState(false);
+  const [showGestuModal, setShowGestuModal] = useState(false);
+  const [showCameraModal, setShowCameraModal] = useState(false);
 
 
   // For large modal
   const openGestuModal = () => {
     setShowGestuModal(true);
-};
+  };
 
-const closeGestuModal = () => {
-  setShowGestuModal(false);
-};
+  const closeGestuModal = () => {
+    setShowGestuModal(false);
+  };
+
+  const openCameraModal = () => {
+    setShowCameraModal(true);
+  };
+
+  const closeCameraModal = () => {
+    setShowCameraModal(false);
+  };
 
 
   const handlecloseNotif = (index) => {
@@ -113,38 +123,42 @@ const closeGestuModal = () => {
         <SpeechTotexte />
       </ModalLarge>
 
-       <MyModalLarge isOpen={showGestuModal} onClose={closeGestuModal}>
-                <HandDetection/>
-          </MyModalLarge>
+      <MyModalLarge isOpen={showGestuModal} onClose={closeGestuModal}>
+        <HandDetection />
+      </MyModalLarge>
+
+      <MyModalLarge isOpen={showCameraModal} onClose={closeCameraModal}>
+        <CameraComponent />
+      </MyModalLarge>
 
       {viewAssistant && (
-                <div className="voice-assistant">
-                  
-                  <div className="close" onClick={handleClose}>
-                    <svg
-                      width="800px"
-                      height="800px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="24" height="24" fill="white" />
-                      <path
-                        d="M7 17L16.8995 7.10051"
-                        stroke="#000000"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M7 7.00001L16.8995 16.8995"
-                        stroke="#000000"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              )}
+        <div className="voice-assistant">
+
+          <div className="close" onClick={handleClose}>
+            <svg
+              width="800px"
+              height="800px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="24" height="24" fill="white" />
+              <path
+                d="M7 17L16.8995 7.10051"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7 7.00001L16.8995 16.8995"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      )}
       <div className="w-p95 pad-top-px20 pad-bottom-px10 explore-header-content">
         <div className="left-head">
           <div className="logo">
@@ -203,9 +217,10 @@ const closeGestuModal = () => {
 
         <div className="right-header">
           <div className="shorcut">
-          <button to={'/explore'} className="shorcut-link" onClick={()=>openGestuModal()}>Commande gestuelle</button>
+            <button to={'/explore'} className="shorcut-link" onClick={() => openGestuModal()}>Commande gestuelle</button>
+            <button className="shorcut-link" onClick={openCameraModal}>Retrouver une personne</button>
             {/* <Link to={'/explore/actu'} className="shorcut-link">Actualités</Link> */}
-            <Link to={'/explore/game'} className="shorcut-link">moment loisirs</Link>
+            {/* <Link to={'/explore/game'} className="shorcut-link">moment loisirs</Link> */}
           </div>
 
           <div className="icons">
@@ -220,9 +235,8 @@ const closeGestuModal = () => {
                 stroke="currentColor"
                 className="w-6 h-6"
                 style={{
-                  backgroundColor: `${
-                    viewNotification ? "var(--primaryColor)" : ""
-                  }`,
+                  backgroundColor: `${viewNotification ? "var(--primaryColor)" : ""
+                    }`,
                   border: "solid 2px rgba(245, 247, 250, 0)",
                 }}
               >
@@ -268,7 +282,7 @@ const closeGestuModal = () => {
                 />
               </svg>
 
-              
+
             </div>
           </div>
 
@@ -286,8 +300,8 @@ const closeGestuModal = () => {
               <small>Resident</small>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 w-px20 marge-left-px10">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-          </svg>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
 
 
             {viewProfile && (
