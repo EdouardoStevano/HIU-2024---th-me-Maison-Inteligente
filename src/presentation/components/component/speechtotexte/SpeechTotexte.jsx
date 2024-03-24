@@ -30,17 +30,22 @@ const SpeechTotexte = () => {
       recognition.start();
       voiceVisualizer.startVisualization();
 
+      function test () {
+        console.log("Mety")
+      }
+
       recognition.onresult = (event) => {
         const speechResult = event.results[0][0].transcript;
 
         if (event.results[0].isFinal) {
           setResult(result + " " + speechResult);
 
-          if (speechResult.toLowerCase().includes("salut.")) {
+          if (speechResult.toLowerCase().includes("salut")) {
             isrecording(false);
             stopRecording();
-            speak("salut comment ça vas");
-          } else if (speechResult.toLowerCase().includes("météo.")) {
+            console.log("test")
+            speak("salut comment comment comment comment ça vas");
+          } else if (speechResult.toLowerCase().includes("météo")) {
             isrecording(false);
             stopRecording();
             speak("vous voulez le meteo d'aujourd'huis");

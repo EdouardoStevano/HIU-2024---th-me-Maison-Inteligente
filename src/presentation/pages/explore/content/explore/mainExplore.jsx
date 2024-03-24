@@ -121,7 +121,7 @@ function MainExplore() {
 
           <Suspense fallback={<div>loadingData</div>}>
             {/* <Spline scene="https://prod.spline.design/O4TqeLAlb3FpxcfI/scene.splinecode" className="house" onLoad={onLoad}/> */}
-            <Spline scene="https://prod.spline.design/uAQq7dUAAi5RLLkq/scene.splinecode" onLoad={onLoad} />
+            {/* <Spline scene="https://prod.spline.design/uAQq7dUAAi5RLLkq/scene.splinecode" onLoad={onLoad} /> */}
           </Suspense>
         </div>
       </div>
